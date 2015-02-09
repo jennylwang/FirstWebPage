@@ -3,12 +3,65 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>JLW2219 Web Project</title>
+		<title>JLW's Web Project</title>
+		
+		<style>
+		/*Define a CSS class called darkTurq - stands for dark turqoise
+		 * This will apply to my divs
+		 * This class will have dark turqoise text, a lavender border and a light grey background 
+		 * this is a class name because it starts with a dot
+		 */
+		.darkTurq {
+			color:#0099CC;
+			border:3px solid #6633FF;
+			background-color:#C0C0C0  
+		}
+			
+		</style>
+		<style>
+			/*Define a CSS class called litePurp - light purple  
+			 *This class will apply to my divs
+			 * This class will have light purple text, a light blue border and a light brown background
+			 */
+			.litePurp {
+				color:#9900CC;
+				border:3px solid #33CCFF;
+				background-color:#CC9966
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Jenny's Internet Space</h1>
 		<!-- Fun first comment -->
 		<h2>My very first web project</h2>
+		
+		<!-- Make a div with turqoise text inside it -->
+		
+		<div class="darkTurq">Learning CSS!</div>
+		
+		<div class="litePurp">Decorating my page</div>
+		
+		<script>
+			/*
+			 * define some variables
+			 * myNumber just demonstrative, usually would just use descriptive tags such as age
+			 * randobucket is a place holder for filling in later 
+			 */
+			var myNumber = 25;
+			var myString = "Here's a string!";
+			var myBool = true;
+			var myArray = [2,4,5,6,7];
+			var myObject = {aKey:"aValue",
+			key2:"value2"};
+			
+			console.log(myObject);
+			myObject.aKey = "newValue";
+			console.log(myObject)
+			
+			var myRandoBucket;
+			console.log(myRandoBucket);
+			
+		</script>
 	</body>
 </html>
 
