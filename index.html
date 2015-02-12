@@ -17,9 +17,8 @@
 			background-color:#C0C0C0  
 		}
 			
-		</style>
-		<style>
-			/*Define a CSS class called litePurp - light purple  
+	
+			/*Define a CSS class called litePurp - stands for light purple  
 			 *This class will apply to my divs
 			 * This class will have light purple text, a light blue border and a light brown background
 			 */
@@ -49,7 +48,7 @@
 			 * Variables of my story 
 			 */
 			var jwLuckyNumber = 22;  
-			var jwFavouriteShow = "Criminal Minds,Bones";  //Added Bones to the list.  Bones is a forensic crime show and Criminal Minds deals with profiling serial killers; I'm obsessed with crime shows.  
+			var jwFavouriteShow = "Criminal Minds,Bones";  //Modification: added Bones to the list.  Bones is a forensic crime show and Criminal Minds deals with profiling serial killers; I'm obsessed with crime shows.  
 			var jwTruthOrDare = true;
 			var jwYearsIMoved= [1993,2001,2004,2005,2009,2010,2012,2014]; //Added 2014. I didn't move houses, but I spent a summer interning in Shanghai in 2014'
 			var jwHobbiesInterests = {sport:"snowboarding",
@@ -73,9 +72,59 @@
 			console.log(jwYearsIMoved);
 			
 			
+			var candies = [{
+				name: "krackel",
+				type: "crisps"
+			}, {
+				name: "special_dark",
+				type: "plain"
+			}, {
+				name: "goodbar",
+				type: "peanuts"
+			},{
+				name: "hersheys",
+				type: "plain"
+			}];
 			
 			
 			
+			/*
+			 * "for" loop
+			 * it has round parenthesis, which means "function"
+			 * "for" is a function that javascript already knows what to do with 
+			 * function = process, such as making coffee - have to follow certain set of steps
+			 * 
+			 * required ingredients: where to start, where to end, how many to increment 
+			 * 
+			 * var creates a box in memory, the i is the variable name, that's the starting point (end with semi colon, a full sentence)
+			 * i<4 - same as saying as three - this where to stop, when I get here, don't go any further
+			 * i++: the current value add 1 - how many to increment, what do I do each time
+			 * 
+			 * I start with 0, I'll stop at 3, every time I hit {} I add 1 
+			 * += is the syntax for current value plus whatever number - ex. +=2
+			 * candies [i] = 1,2,3 then we're done
+			 */
+			
+			for (var i=0; i<4; i++){
+				/*
+				 * crate an additional label for the item in the list at index "i"
+				 */
+				var myItem = candies[i]
+				/*
+				 * "if" is a conditional
+				 * I pass it the thing that can change on the left and use a DOUBLE EQUALS sign to compare it to a fixed value on the right
+				 * If candy type equal plain, then console log it.  If not, skip the step altogether 
+				 * If you console log it, you'll only be left with two - dark chocolate and hersheys - the only ones that are plain 
+				 */
+				/* 
+				 * If you do console.log(i)
+				 *Result in 0, 1, object (special dark), 2, 3, object (hershey) - the exact order 
+				 */
+				if (myItem.type == "plain"){
+				console.log (myItem);
+				} // end of if statement
+				
+			} // end of for loop 
 			
 			
 			
