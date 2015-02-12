@@ -87,6 +87,31 @@
 			}];
 			
 			
+			var candies_2 = [{
+				name: "hershey", // now have three plains
+				type: "plain"
+			}, {
+				name: "special_dark",
+				type: "plain"
+			}, {
+				name: "goodbar",
+				type: "peanuts"
+			},{
+				name: "hersheys",
+				type: "plain"
+			}];
+			
+		/*
+		 * function sortCandies take a list of candy objects as an argument and prints out the ones of type plain
+		 * Things inside () are "arguments"
+		 */	
+		function sortCandies(candyList){
+			/* had to repeat "for" loop to sort the second candy list - make a function instead
+			 * Descriptive name for function
+			 * candyList is the ingredient
+			 * Anywhere it said candies, replace it with candyList
+			 * "Calling the function", you have to ask the function to perform 
+			 */
 			
 			/*
 			 * "for" loop
@@ -105,28 +130,45 @@
 			 * candies [i] = 1,2,3 then we're done
 			 */
 			
+			var favCandies=[]
 			for (var i=0; i<4; i++){
+				
 				/*
 				 * crate an additional label for the item in the list at index "i"
 				 */
-				var myItem = candies[i]
-				/*
-				 * "if" is a conditional
+				var myItem = candyList[i];
+				
+				 /* "if" is a conditional
 				 * I pass it the thing that can change on the left and use a DOUBLE EQUALS sign to compare it to a fixed value on the right
 				 * If candy type equal plain, then console log it.  If not, skip the step altogether 
 				 * If you console log it, you'll only be left with two - dark chocolate and hersheys - the only ones that are plain 
-				 */
-				/* 
+		
 				 * If you do console.log(i)
 				 *Result in 0, 1, object (special dark), 2, 3, object (hershey) - the exact order 
 				 */
 				if (myItem.type == "plain"){
-				console.log (myItem);
-				} // end of if statement
+				console.log(myItem);
 				
-			} // end of for loop 
+					favCandies.push(myItem); 
+					
+				}else{
+					console.log("no thanks"); // the 0, 1, 2, 3 turns into no thanks 
+					
+				} // end of "if" statement
+				
+			} // end of "for: loop 
 			
+			return (favCandies); // give back the plain candies - all I want back are the plain candies.  Return it to the line of code that wanted it
 			
+			} // end of sortCandies function
+			
+			console.log("sorting candies_2");
+			var favs1 = sortCandies(candies_2);
+			console.log(favs1);
+			
+			console.log("sorting candies");
+			var favs2= sortCandies(candies); 
+			console.log(favs2);
 			
 		</script>
 	</body>
